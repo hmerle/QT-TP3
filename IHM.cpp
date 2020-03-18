@@ -27,3 +27,11 @@ IHM::IHM(QWidget* parent) : QMainWindow(parent) {
     this->setCentralWidget(mainWidget);
     connect(slider, SIGNAL(valueChanged(int)), progressBar, SLOT(setValue(int)));
 }
+
+void IHM::signalValueChanged(int value) {
+
+}
+
+void IHM::slotSetValue(int value) {
+
+}
