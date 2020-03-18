@@ -5,8 +5,10 @@
 #include <QtWidgets/QtWidgets>
 #include "IHM.h"
 
-IHM::IHM() {
+IHM::IHM(QWidget* parent) : QMainWindow(parent) {
     this->setMinimumSize(200,200);
+    QWidget* mainWidget = new QWidget();
+
     progressBar = new QProgressBar();
     progressBar->setRange(0, 100);
     progressBar->setValue(0);
@@ -21,5 +23,7 @@ IHM::IHM() {
     QVBoxLayout* layout = new QVBoxLayout;
     layout->addWidget(progressBar);
     layout->addWidget(slider);
-    this->setLayout(layout);
+    mainWidget->setLayout(layout);
+    this->setCentralWidget(mainWidget);
+    connect(slider, SIGNAL(valueChanged(int)), progressBar, SLOT(setValue(int)));
 }

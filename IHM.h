@@ -10,13 +10,18 @@
 #include <QSlider>
 #include <QProgressBar>
 
-class IHM : public QWidget{
+class IHM : public QMainWindow{
     Q_OBJECT
 public:
-    IHM();
+    IHM(QWidget* parent = nullptr);
 private:
     QSlider* slider;
     QProgressBar* progressBar;
+
+    signals:
+    void signalValueChanged(int value);
+public slots:
+    void slotSetValue(int value);
 };
 
 
