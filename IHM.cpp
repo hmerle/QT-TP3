@@ -16,6 +16,7 @@ IHM::IHM() {
     slider->setRange(0, 100);
     slider->setValue(0);
     slider->setGeometry(10, 40, 180, 30);
+
     this->setWindowTitle("IHM");
     QVBoxLayout* layout = new QVBoxLayout;
     layout->addWidget(progressBar);
