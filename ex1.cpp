@@ -1,5 +1,5 @@
 //
-// Created by Hugo on 18/03/2020.
+// Created by Hugo Merle on 18/03/2020.
 //
 
 #include <QtWidgets/QtWidgets>

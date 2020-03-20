@@ -1,3 +1,7 @@
+//
+// Created by Hugo Merle on 18/03/2020.
+//
+
 #include <iostream>
 #include <QApplication>
 #include <QPushButton>
