@@ -3,7 +3,6 @@
 //
 
 #include <QtWidgets/QtWidgets>
-#include "ex1.h"
 #include "ex2.h"
 
 ex1::ex1(QWidget* parent) : QMainWindow(parent) {
