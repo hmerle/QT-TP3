@@ -10,7 +10,7 @@
 #include <QSlider>
 #include <QProgressBar>
 
-class IHM : public QMainWindow{
+class IHM : public QMainWindow {
     Q_OBJECT
 public:
     IHM(QWidget* parent = nullptr);

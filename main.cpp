@@ -7,7 +7,7 @@
 int exercice1(int argc, char** argv){
     QApplication app(argc, argv);
     IHM* window = new IHM;
-    window->show();
+//    window->show();
     return app.exec();
 }
 
