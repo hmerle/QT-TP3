@@ -5,7 +5,6 @@
 #include <iostream>
 #include <QtWidgets/QVBoxLayout>
 #include "ex2.h"
-#include "ex1.h"
 using namespace std;
 
 ex2::ex2(QWidget *parent) : QMainWindow(parent) {

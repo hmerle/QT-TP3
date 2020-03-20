@@ -5,10 +5,11 @@
 #ifndef TP3_EX1_H
 #define TP3_EX1_H
 
-
-#include <QWidget>
-#include <QSlider>
+#include <QMainWindow>
+#include <QObject>
+#include <QLabel>
 #include <QProgressBar>
+#include <QSlider>
 
 class ex1 : public QMainWindow{
     Q_OBJECT
