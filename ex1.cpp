@@ -3,9 +3,9 @@
 //
 
 #include <QtWidgets/QtWidgets>
-#include "IHM.h"
+#include "ex1.h"
 
-IHM::IHM(QWidget* parent) : QMainWindow(parent) {
+ex1::ex1(QWidget* parent) : QMainWindow(parent) {
     this->setMinimumSize(200,200);
     QWidget* mainWidget = new QWidget();
 
@@ -19,7 +19,7 @@ IHM::IHM(QWidget* parent) : QMainWindow(parent) {
     slider->setValue(0);
     slider->setGeometry(10, 40, 180, 30);
 
-    this->setWindowTitle("IHM");
+    this->setWindowTitle("ex1");
     QVBoxLayout* layout = new QVBoxLayout;
     layout->addWidget(progressBar);
     layout->addWidget(slider);
@@ -28,10 +28,10 @@ IHM::IHM(QWidget* parent) : QMainWindow(parent) {
     connect(slider, SIGNAL(valueChanged(int)), progressBar, SLOT(setValue(int)));
 }
 
-void IHM::signalValueChanged(int value) {
+void ex1::signalValueChanged(int value) {
 
 }
 
-void IHM::slotSetValue(int value) {
+void ex1::slotSetValue(int value) {
 
 }

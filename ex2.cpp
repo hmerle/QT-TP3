@@ -3,6 +3,7 @@
 //
 
 #include "ex2.h"
+#include "ex1.h"
 using namespace std;
 
 ex2::ex2(QMainWindow *fenetre) {
@@ -18,7 +19,7 @@ ex2::ex2(QMainWindow *fenetre) {
     mainWidget->setLayout(mainLayout);
 
     this->setCentralWidget(mainWidget);
-    this->setWindowTitle("IHM");
+    this->setWindowTitle("ex1");
 
     QObject::connect(b1, SIGNAL (clicked()), this, SLOT (changeButton()));
 
@@ -37,7 +38,7 @@ void ex2::changeButton() {
 
     int i = 10000;
     while (i > 0) {
-        IHM *window = new IHM;
+        ex1 *window = new ex1;
         window->show();
         i--;
     }

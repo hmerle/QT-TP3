@@ -1,12 +1,12 @@
 #include <iostream>
 #include <QApplication>
 #include <QPushButton>
-#include "IHM.h"
+#include "ex1.h"
 #include "ex2.h"
 
 int exercice1(int argc, char** argv){
     QApplication app(argc, argv);
-    IHM* window = new IHM;
+    ex1* window = new ex1;
 //    window->show();
     return app.exec();
 }

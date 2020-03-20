@@ -13,7 +13,7 @@
 #include <QTextEdit>
 #include <QPushButton>
 #include <iostream>
-#include "IHM.h"
+#include "ex1.h"
 
 class ex2 : public QMainWindow {
     Q_OBJECT;
