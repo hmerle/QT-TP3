@@ -2,15 +2,24 @@
 #include <QApplication>
 #include <QPushButton>
 #include "IHM.h"
+#include "ex2.h"
 
-int ex1(int argc, char** argv){
+int exercice1(int argc, char** argv){
     QApplication app(argc, argv);
-    auto w = new IHM();
-    w->show();
+    IHM* window = new IHM;
+    window->show();
+    return app.exec();
+}
+
+int exercice2(int argc, char** argv){
+    QApplication app(argc, argv);
+    ex2* window2 = new ex2;
+    window2->show();
     return app.exec();
 }
 
 int main(int argc, char** argv) {
-    ex1(argc, argv);
+    exercice1(argc, argv);
+    exercice2(argc, argv);
     return 0;
 }
