@@ -2,44 +2,39 @@
 // Created by Hugo on 20/03/2020.
 //
 
+#include <iostream>
+#include <QtWidgets/QVBoxLayout>
 #include "ex2.h"
 #include "ex1.h"
 using namespace std;
 
-ex2::ex2(QMainWindow *fenetre) {
+ex2::ex2(QWidget *parent) : QMainWindow(parent) {
     QWidget* mainWidget = new QWidget();
     QVBoxLayout* mainLayout = new QVBoxLayout();
 
-    b1 = new QPushButton("Fils");
-    b1->setToolTip("Non");
-    e1 = new QTextEdit("texte initial");
+    button = new QPushButton("Fils");
+    button->setToolTip("Non");
+    edit = new QTextEdit("texte initial");
 
-    mainLayout->addWidget(b1);
-    mainLayout->addWidget(e1);
+    mainLayout->addWidget(button);
+    mainLayout->addWidget(edit);
     mainWidget->setLayout(mainLayout);
 
     this->setCentralWidget(mainWidget);
     this->setWindowTitle("ex1");
 
-    QObject::connect(b1, SIGNAL (clicked()), this, SLOT (changeButton()));
-
+    connect(button,SIGNAL(clicked()),this,SLOT(nomBoutton()));
+    connect(button,SIGNAL(clicked()),this,SLOT(showEx1()));
 }
 
-void ex2::changeButton() {
-    b1->setText("Exemple");
-    b1->setToolTip("Oui");
-
+void ex2::nomBouton() {
     value++;
-    QString texte = "Exemple" + QString::number(value) + "\n" + e1->toPlainText();
-    e1->clear();
-    e1->setText(texte);
+    button->setText("Example");
+    edit->insertPlainText(QString("Exemple %1 \n").arg(value));
+}
 
-    cout << "Exemple" << value << endl;
-
-    int i = 10000;
-    while (i > 0) {
-        ex1 *window = new ex1;
-        window->show();
-        i--;
-    }
+void ex2::showEx1() {
+    ex1* window = new ex1();
+    window->show();
+    this->hide();
 }

@@ -13,15 +13,10 @@
 class ex1 : public QMainWindow {
     Q_OBJECT
 public:
-    ex1(QWidget* parent = nullptr);
+    ex1(QMainWindow* parent = nullptr);
 private:
     QSlider* slider;
     QProgressBar* progressBar;
-
-    signals:
-    void signalValueChanged(int value);
-public slots:
-    void slotSetValue(int value);
 };
 
 

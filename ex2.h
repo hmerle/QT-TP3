@@ -6,25 +6,23 @@
 #define TP3_EX2_H
 
 
-#include <QtWidgets>
-#include <QObject>
 #include <QMainWindow>
-#include <QVBoxLayout>
-#include <QTextEdit>
+#include <QObject>
 #include <QPushButton>
-#include <iostream>
+#include <QTextEdit>
 #include "ex1.h"
 
 class ex2 : public QMainWindow {
     Q_OBJECT;
 public:
-    ex2(QMainWindow* fenetre = 0);
+    ex2(QWidget* parent = nullptr);
 
 public slots:
-    void changeButton();
+    void nomBouton();
+    void showEx1();
 private:
-    QPushButton *b1;
-    QTextEdit *e1;
+    QPushButton *button;
+    QTextEdit *edit;
     int value=0;
 };
 

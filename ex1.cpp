@@ -5,7 +5,7 @@
 #include <QtWidgets/QtWidgets>
 #include "ex1.h"
 
-ex1::ex1(QWidget* parent) : QMainWindow(parent) {
+ex1::ex1(QMainWindow* parent) : QMainWindow(parent) {
     this->setMinimumSize(200,200);
     QWidget* mainWidget = new QWidget();
 
@@ -26,12 +26,4 @@ ex1::ex1(QWidget* parent) : QMainWindow(parent) {
     mainWidget->setLayout(layout);
     this->setCentralWidget(mainWidget);
     connect(slider, SIGNAL(valueChanged(int)), progressBar, SLOT(setValue(int)));
-}
-
-void ex1::signalValueChanged(int value) {
-
-}
-
-void ex1::slotSetValue(int value) {
-
 }
