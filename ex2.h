@@ -12,7 +12,7 @@
 #include <QTextEdit>
 #include "ex1.h"
 
-class ex2 : public QMainWindow {
+class ex2 : public QMainWindow{
     Q_OBJECT;
 public:
     ex2(QWidget* parent = nullptr);

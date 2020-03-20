@@ -10,10 +10,10 @@
 #include <QSlider>
 #include <QProgressBar>
 
-class ex1 : public QMainWindow {
+class ex1 : public QMainWindow{
     Q_OBJECT
 public:
-    ex1(QMainWindow* parent = nullptr);
+    ex1(QWidget* parent = nullptr);
 private:
     QSlider* slider;
     QProgressBar* progressBar;
